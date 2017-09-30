@@ -55,4 +55,11 @@ describe Generator do
       expect(Generator::VALID_CHARACTERS).to be_empty
     end
   end
+  describe '#test_add' do
+    it 'Adds the Upcase Characters array to the valid characters array' do
+      gen = Generator.new
+      gen.test_add
+      expect((Generator::VALID_CHARACTERS).length).to equal(26)
+    end
+  end
 end
