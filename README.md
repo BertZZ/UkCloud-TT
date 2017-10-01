@@ -9,11 +9,11 @@ The task was to build a password generator that had the option of adding Upperca
 bundle install
 rspec
 generator = Generator.new(length, Upercase, Lowercase, Numbers, Symbols)
-#For the variables, enter true if you would like to make them avalible in the password and false if you would not.
+For the variables, enter true if you would like to make them avalible in the password and false if you would not.
 ```
 
 ## Issues
 The instructions were not clear as to if the program had to guarentee
 the presence of any data type entered as true, for example if you select true for uppercase, lowercase and numbers do I have to guarentee at least 1 uppercase letter, 1 lowercase letter and 1 number in the password. 
 
-I chose not to implement this feature so as to not overcomplicate the code. However I have thought about how I would implement this feature.
+I chose not to implement this feature so as to not overcomplicate the code. However I have thought about how I would implement this feature. With more time I would have obviouly spoken to the team to gain clarification on the matter, however as this tech test had a quick turn around this was not possible. 
