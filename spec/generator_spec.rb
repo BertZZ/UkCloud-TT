@@ -1,7 +1,7 @@
 require 'generator'
 
 describe Generator do
-  subject(:generator) { described_class.new() }
+  subject(:generator) { described_class.new(10,false,false,false,false) }
   it { is_expected.to be_a Generator }
   describe "Uppcase Array" do
     it 'Is an Array' do
@@ -55,11 +55,32 @@ describe Generator do
       expect(Generator::VALID_CHARACTERS).to be_empty
     end
   end
-  describe '#test_add' do
-    it 'Adds the Upcase Characters array to the valid characters array' do
-      gen = Generator.new
-      gen.test_add
-      expect((Generator::VALID_CHARACTERS).length).to equal(26)
+  describe '#add_upcase' do
+    it 'Adds the UPCASE_CHARS arrray to the VALID_CHARACTERS Array' do
+      generator.add_upcase
+      expect(Generator::VALID_CHARACTERS).to eq(Generator::UPCASE_CHARS)
+      generator.clear_valid_characters
+    end
+  end
+  describe '#add_downcase' do
+    it 'Adds the DOWNCASE_CHARS arrray to the VALID_CHARACTERS Array' do
+      generator.add_downcase
+      expect(Generator::VALID_CHARACTERS).to eq(Generator::DOWNCASE_CHARS)
+      generator.clear_valid_characters
+    end
+  end
+  describe '#add_numbers' do
+    it 'Adds the NUMBERS arrray to the VALID_CHARACTERS Array' do
+      generator.add_numbers
+      expect(Generator::VALID_CHARACTERS).to eq(Generator::NUMBERS)
+      generator.clear_valid_characters
+    end
+  end
+  describe '#add_special' do
+    it 'Adds the SPECIAL arrray to the VALID_CHARACTERS Array' do
+      generator.add_special
+      expect(Generator::VALID_CHARACTERS).to eq(Generator::SPECIAL)
+      generator.clear_valid_characters
     end
   end
 end
