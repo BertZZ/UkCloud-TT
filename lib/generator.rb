@@ -26,6 +26,8 @@ class Generator
         @password << char
       end
     end
+    puts "Your password is " + @password
+    clear_password
   end
 
   def get_valid_characters
