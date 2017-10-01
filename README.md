@@ -14,4 +14,6 @@ generator = Generator.new(length, Upercase, Lowercase, Numbers, Symbols)
 
 ## Issues
 The instructions were not clear as to if the program had to guarentee
-the presence of any data type entered as true, for example if you select true for Uppercase, Lowercase and Numbers do I have to guarentee at least 1 Uppercase letter, 1 Lowercase letter and 1 number in the password. I chose not to implement this feature so as to not overcomplicate the code. However I have thought about how I would implement this feature. 
+the presence of any data type entered as true, for example if you select true for uppercase, lowercase and numbers do I have to guarentee at least 1 uppercase letter, 1 lowercase letter and 1 number in the password. 
+
+I chose not to implement this feature so as to not overcomplicate the code. However I have thought about how I would implement this feature.
