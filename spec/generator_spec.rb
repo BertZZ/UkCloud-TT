@@ -43,7 +43,7 @@ describe Generator do
     it 'Is 7 elements long' do
       expect((Generator::SPECIAL).length).to equal(7)
     end
-    it 'Contains all fixed numbers' do
+    it 'Contains all strings' do
       expect(Generator::SPECIAL).to  all(be_an_instance_of(String))
     end
   end
