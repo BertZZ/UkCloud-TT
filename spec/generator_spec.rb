@@ -32,8 +32,8 @@ describe Generator do
     it 'Is 10 elements long' do
       expect((Generator::NUMBERS).length).to equal(10)
     end
-    it 'Contains all fixed numbers' do
-      expect(Generator::NUMBERS).to all(be_an_instance_of(Fixnum))
+    it 'Contains all strings' do
+      expect(Generator::NUMBERS).to all(be_an_instance_of(String))
     end
   end
   describe "Special Array" do
@@ -81,6 +81,16 @@ describe Generator do
       generator.add_special
       expect(Generator::VALID_CHARACTERS).to eq(Generator::SPECIAL)
       generator.clear_valid_characters
+    end
+  end
+  describe '#generate_password' do
+    it 'Throws an error if all args are false' do
+      expect{ generator.generate_password }.to raise_error("Please select at least one field to make up your Password")
+    end
+    it 'Generates a password' do
+      gen = Generator.new(10, true,true,true,true)
+      gen.generate_password
+      expect(gen.password.length).to equal(10)
     end
   end
 end
